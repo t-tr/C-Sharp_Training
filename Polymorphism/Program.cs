@@ -27,6 +27,14 @@ namespace Polymorphism
         }
     }
 
+    class Cow : Animal  // Derived class (child) 
+    {
+        public override void animalSound()
+        {
+            Console.WriteLine("Moooh");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
