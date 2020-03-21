@@ -63,6 +63,31 @@ namespace HelloWorld
 
             // Max array
             Console.WriteLine(tab.Max());
+
+            // Enumerators
+            Console.WriteLine("Value for " + Level.High + " is " + (int)Level.High);
+
+            int myNum = (int)Months.April;
+            Console.WriteLine(myNum);
+
+        }
+
+        enum Level
+        {
+            Low,
+            Medium,
+            High
+        }
+
+        enum Months
+        {
+            January,    // 0
+            February,   // 1
+            March = 6,    // 6
+            April,      // 7
+            May,        // 8
+            June,       // 9
+            July        // 10
         }
 
     }
