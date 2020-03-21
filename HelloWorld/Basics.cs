@@ -31,7 +31,15 @@ namespace HelloWorld
             int age2 = Convert.ToInt32(Console.ReadLine());
 
             // Math
-            Console.WriteLine("Older is " + Math.Max(age1,age2));
+            Console.WriteLine("Older is " + Math.Max(age1, age2));
+            Console.WriteLine("Sqaure root of 100 is: " + Math.Sqrt(100));
+            Console.WriteLine("Round method: " + Math.Round(2.99));
+
+            // string interpolation 
+            string firstName = "John";
+            string lastName = "Doe";
+            name = $"My full name is: {firstName} {lastName}";
+            Console.WriteLine(name + "/" + name.ToUpper());
 
             // Evaluate expression
             Console.WriteLine(10 > 9);
