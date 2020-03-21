@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File", "File\File.csproj", "{BF3F801A-69C6-4C3D-8525-11D5C84D78B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank", "HackerRank\HackerRank.csproj", "{001FD183-8041-461B-A1DF-2EE895372690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{BF3F801A-69C6-4C3D-8525-11D5C84D78B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF3F801A-69C6-4C3D-8525-11D5C84D78B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF3F801A-69C6-4C3D-8525-11D5C84D78B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001FD183-8041-461B-A1DF-2EE895372690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001FD183-8041-461B-A1DF-2EE895372690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001FD183-8041-461B-A1DF-2EE895372690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001FD183-8041-461B-A1DF-2EE895372690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
