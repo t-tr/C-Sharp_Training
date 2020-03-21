@@ -16,6 +16,14 @@ namespace File
 
             File.Delete("filename.txt");
 
+            try{
+                readText = File.ReadAllText("filename.txt");  // Read the contents of the file
+                Console.WriteLine(readText);  // Output the content        
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong when reading the file: " + e.Message);
+            }
         }
     }
 }
