@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System;
 
 namespace HackerRank
 {
@@ -17,6 +18,14 @@ namespace HackerRank
             Console.WriteLine("<AbcdefGFedcba>:" + Program.palindrom("AbcdefGFedcba"));
             Console.WriteLine("<bcdefgfedcba>:" + Program.palindrom("bcdefgfedcba"));
             Console.WriteLine("<     >:" + Program.palindrom("     "));
+
+            // Find odd numbers within a range
+            Program.oddNumbers(3,7);
+            Program.oddNumbers(3, 8);
+            Program.oddNumbers(4, 8);
+            Program.oddNumbers(4, 9);
+            Program.oddNumbers(4, 155);
+
         }
 
         /* return 1's complement of the number given as parameter*/
@@ -61,6 +70,47 @@ namespace HackerRank
             //Console.WriteLine(result);
 
             return (result == word);
+        }
+
+        /* Find the number in the array.
+         Return YES if found, "NO" otherwise*/
+        public static string findNumber(List<int> arr, int k)
+        {
+            bool res = false;
+
+            foreach (int i in arr)
+            {
+                if (i == k)
+                {
+                    res = true;
+                    break;
+                }
+            }
+
+            return res ? "YES" : "NO";
+
+        }
+
+        public static List<int> oddNumbers(int l, int r)
+        {
+            List<int> oddLst = new List<int>();
+
+            int length = (r - l)/2;
+
+            if ((l % 2 != 0) || (r % 2 != 0)){
+                length++;
+            }
+
+            for (int i=l; i <= r; i++) {
+                if (i % 2 != 0) {
+                    oddLst.Add(i);
+                    Console.WriteLine(i);
+                }
+            }
+
+
+            return oddLst;
+
         }
     }
 }
