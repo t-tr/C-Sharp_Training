@@ -5,19 +5,19 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics", "HelloWorld\Basics.csproj", "{CFD829D4-AD09-448F-8F26-B98AB1151C45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car", "Car\Car.csproj", "{059D2114-063D-4FF9-86C6-D8FFFF1BE4F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car", "Car\Car.csproj", "{059D2114-063D-4FF9-86C6-D8FFFF1BE4F6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{603889C8-60B0-4642-8CB8-D0F8C84D270B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{A208CEA8-B697-4902-B2CB-8988D29AC7E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{A208CEA8-B697-4902-B2CB-8988D29AC7E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "Abstract\Abstract.csproj", "{80A96E9F-FCDF-4D72-8BF4-C66C85DC1AFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstract", "Abstract\Abstract.csproj", "{80A96E9F-FCDF-4D72-8BF4-C66C85DC1AFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{FD0F2A92-EB15-4D5F-B91E-1240B5254FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{FD0F2A92-EB15-4D5F-B91E-1240B5254FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File", "File\File.csproj", "{BF3F801A-69C6-4C3D-8525-11D5C84D78B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "File", "File\File.csproj", "{BF3F801A-69C6-4C3D-8525-11D5C84D78B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank", "HackerRank\HackerRank.csproj", "{001FD183-8041-461B-A1DF-2EE895372690}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerRank", "HackerRank\HackerRank.csproj", "{001FD183-8041-461B-A1DF-2EE895372690}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
