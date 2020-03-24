@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System;
 
 namespace HackerRank
@@ -33,6 +34,9 @@ namespace HackerRank
             Console.WriteLine("1 in the list?:" + Program.findNumber(lst, 1));
             Console.WriteLine("100 in the list?:" + Program.findNumber(lst, 100));
             Console.WriteLine("-1 in the list?:" + Program.findNumber(lst, -1));
+
+            // Run hourglassSum
+            Console.WriteLine(Program.hourglassSum());
 
         }
 
@@ -152,5 +156,41 @@ namespace HackerRank
 
             return oddLst;
         }
+
+
+        // hourglassSum function.
+        static int hourglassSum()
+        {
+            int[][] arr = new int[6][];
+            arr[0] = new int[6] { 1, 1, 1, 1, 1, 1 };
+            arr[1] = new int[6] { 1, 1, 1, 1, 1, 1 };
+            arr[2] = new int[6] { 1, 1, 1, 1, 1, 1 };
+            arr[3] = new int[6] { 1, 1, 1, 1, 1, 1 };
+            arr[4] = new int[6] { 1, 1, 1, 1, 1, 1 };
+            arr[5] = new int[6] { 1, 1, 1, 1, 1, 1 };
+
+            int[] sums = new int[16];
+            int k = 0;
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    sums[k] =
+                    arr[i][j] +
+                    arr[i][j + 1] +
+                    arr[i][j + 2] +
+                    arr[i + 1][j + 1] +
+                    arr[i + 2][j] +
+                    arr[i + 2][j + 1] +
+                    arr[i + 2][j + 2];
+                    k++;
+                }
+            }
+
+            return sums.Max();
+
+        }
+
     }
 }
