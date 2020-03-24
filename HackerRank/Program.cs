@@ -38,6 +38,9 @@ namespace HackerRank
             // Run hourglassSum
             Console.WriteLine(Program.hourglassSum());
 
+            // Run rotLeft
+            Program.rotLeft1(new int[15] {33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97}, 13);
+            Program.rotLeft2(new int[15] { 33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97 }, 13);
         }
 
         /* Return 1's complement of the number given as parameter*/
@@ -191,6 +194,49 @@ namespace HackerRank
             return sums.Max();
 
         }
+
+        // rotLeft based on creating all arrays.
+        static int[] rotLeft1(int[] a, int d)
+        {
+
+            int l = a.Length;
+            int[] tabIni = a;
+
+            int[] tabRes = new int[l];
+
+            for (int k=0;k<d;k++)
+            {
+                tabRes = new int[l];
+
+                for (int i = 0; i < l-1; i++) {
+                    tabRes[i] = tabIni[i+1];
+                }
+
+                tabRes[l - 1] = tabIni[0];
+                tabIni = tabRes;
+            }
+
+            return tabRes;
+        }
+
+        // rotLeft based on simple copy. Much more performant than rotLeft1
+        static int[] rotLeft2(int[] a, int d)
+        {
+
+            int l = a.Length;
+            int[] tabRes = new int[l];
+
+            // Copy from offset d to last index
+            for (int i = 0; i < l-d ; i++)
+                tabRes[i] = a[d + i];
+
+            // Copy from 0 to index d
+            for (int i = 0; i < d; i++)
+                tabRes[l-d+i] = a[i];
+
+            return tabRes;
+        }
+
 
     }
 }
