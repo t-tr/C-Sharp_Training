@@ -41,6 +41,17 @@ namespace HackerRank
             // Run rotLeft
             Program.rotLeft1(new int[15] {33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97}, 13);
             Program.rotLeft2(new int[15] { 33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97 }, 13);
+
+            Console.WriteLine("minimumBribes");
+            Program.minimumBribes(new int[5] { 2, 1, 5, 3, 4 });
+            Program.minimumBribes(new int[5] { 1, 2, 3, 4, 5 });
+            Program.minimumBribes(new int[5] { 2, 3, 4, 5, 1 });
+            Program.minimumBribes(new int[5] { 2, 5, 1, 3, 4 });
+            Program.minimumBribes(new int[10] { 3, 1, 2, 5, 4,7, 6, 8, 10, 9 });
+            Program.minimumBribes(new int[8] { 1, 2, 5, 3, 7, 8, 6, 4 });
+            Console.WriteLine("minimumBribes");
+
+
         }
 
         /* Return 1's complement of the number given as parameter*/
@@ -237,6 +248,35 @@ namespace HackerRank
             return tabRes;
         }
 
+        // Complete the minimumBribes function below.
+        static void minimumBribes(int[] q)
+        {
+            int bribes = 0;
+
+            for (int i = 0; i < q.Length; i++)
+            {
+                if (q[i] - i > 3)
+                {
+                    Console.WriteLine("Too chaotic");
+                    bribes = -1;
+                    break;
+                }
+
+                for (int j = i; j < q.Length; j++)
+                {
+                    if (q[i] > q[j])
+                    {
+                        bribes++;
+                    }
+                }
+
+            }
+
+            if (bribes != -1)
+            {
+                Console.WriteLine(bribes);
+            }
+        }
 
     }
 }
