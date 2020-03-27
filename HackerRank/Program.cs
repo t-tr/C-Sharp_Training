@@ -21,15 +21,15 @@ namespace HackerRank
             Console.WriteLine("<     >:" + Program.palindrom("     "));
 
             // Find odd numbers within a range
-            Program.oddNumbers(3,7);
+            Program.oddNumbers(3, 7);
             Program.oddNumbers(3, 8);
             Program.oddNumbers(4, 8);
             Program.oddNumbers(4, 9);
             Program.oddNumbers(4, 155);
 
             // Call find the number
-            List<int> lst = new List<int>(10) { 1,2,3,4,5,6,7,8,9,100};
-            Console.WriteLine("6 in the list?:" + Program.findNumber(lst,6));
+            List<int> lst = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 100 };
+            Console.WriteLine("6 in the list?:" + Program.findNumber(lst, 6));
             Console.WriteLine("11 in the list?:" + Program.findNumber(lst, 11));
             Console.WriteLine("1 in the list?:" + Program.findNumber(lst, 1));
             Console.WriteLine("100 in the list?:" + Program.findNumber(lst, 100));
@@ -39,23 +39,28 @@ namespace HackerRank
             Console.WriteLine(Program.hourglassSum());
 
             // Run rotLeft
-            Program.rotLeft1(new int[15] {33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97}, 13);
-            Program.rotLeft2(new int[15] { 33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97 }, 13);
+            Program.rotLeft(new int[15] { 33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97 }, 13);
+            Program.rotLeftPerf(new int[15] { 33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97 }, 13);
 
-            Console.WriteLine("minimumBribes");
             Program.minimumBribes(new int[5] { 2, 1, 5, 3, 4 });
             Program.minimumBribes(new int[5] { 1, 2, 3, 4, 5 });
             Program.minimumBribes(new int[5] { 2, 3, 4, 5, 1 });
             Program.minimumBribes(new int[5] { 2, 5, 1, 3, 4 });
-            Program.minimumBribes(new int[10] { 3, 1, 2, 5, 4,7, 6, 8, 10, 9 });
+            Program.minimumBribes(new int[10] { 3, 1, 2, 5, 4, 7, 6, 8, 10, 9 });
             Program.minimumBribes(new int[8] { 1, 2, 5, 3, 7, 8, 6, 4 });
-            Console.WriteLine("minimumBribes");
+
+            Program.minimumBribesPerf(new int[5] { 2, 1, 5, 3, 4 });
+            Program.minimumBribesPerf(new int[5] { 1, 2, 3, 4, 5 });
+            Program.minimumBribesPerf(new int[5] { 2, 3, 4, 5, 1 });
+            Program.minimumBribesPerf(new int[5] { 2, 5, 1, 3, 4 });
+            Program.minimumBribesPerf(new int[10] { 3, 1, 2, 5, 4, 7, 6, 8, 10, 9 });
+            Program.minimumBribesPerf(new int[8] { 1, 2, 5, 3, 7, 8, 6, 4 });
 
 
         }
 
         /* Return 1's complement of the number given as parameter*/
-        public static int numberComplement(int number){
+        public static int numberComplement(int number) {
 
             string binary = Convert.ToString(number, 2);
             char[] complBin = new char[binary.Length];
@@ -71,14 +76,14 @@ namespace HackerRank
 
             //Console.WriteLine(res);
 
-            return Convert.ToInt32(new string(complBin), 2);             
+            return Convert.ToInt32(new string(complBin), 2);
         }
 
         /* Return true if parameter is a palindrom, otherwise return false */
         public static bool palindrom(string word)
         {
 
-            if (word.Trim() == ""){
+            if (word.Trim() == "") {
                 return true;
             }
 
@@ -121,15 +126,15 @@ namespace HackerRank
         {
             List<int> oddLst = new List<int>();
 
-            int length = (r - l)/2;
+            int length = (r - l) / 2;
 
             // Add 1 to the total number if l or r if an odd number
-            if ((l % 2 != 0) || (r % 2 != 0)){
+            if ((l % 2 != 0) || (r % 2 != 0)) {
                 length++;
             }
 
             // Create the list of odd numbers
-            for (int i=l; i <= r; i++) {
+            for (int i = l; i <= r; i++) {
                 if (i % 2 != 0) {
                     oddLst.Add(i);
                 }
@@ -207,7 +212,7 @@ namespace HackerRank
         }
 
         // rotLeft based on creating all arrays.
-        static int[] rotLeft1(int[] a, int d)
+        static int[] rotLeft(int[] a, int d)
         {
 
             int l = a.Length;
@@ -215,12 +220,12 @@ namespace HackerRank
 
             int[] tabRes = new int[l];
 
-            for (int k=0;k<d;k++)
+            for (int k = 0; k < d; k++)
             {
                 tabRes = new int[l];
 
-                for (int i = 0; i < l-1; i++) {
-                    tabRes[i] = tabIni[i+1];
+                for (int i = 0; i < l - 1; i++) {
+                    tabRes[i] = tabIni[i + 1];
                 }
 
                 tabRes[l - 1] = tabIni[0];
@@ -231,19 +236,19 @@ namespace HackerRank
         }
 
         // rotLeft based on simple copy. Much more performant than rotLeft1
-        static int[] rotLeft2(int[] a, int d)
+        static int[] rotLeftPerf(int[] a, int d)
         {
 
             int l = a.Length;
             int[] tabRes = new int[l];
 
             // Copy from offset d to last index
-            for (int i = 0; i < l-d ; i++)
+            for (int i = 0; i < l - d; i++)
                 tabRes[i] = a[d + i];
 
             // Copy from 0 to index d
             for (int i = 0; i < d; i++)
-                tabRes[l-d+i] = a[i];
+                tabRes[l - d + i] = a[i];
 
             return tabRes;
         }
@@ -258,8 +263,7 @@ namespace HackerRank
                 if (q[i] - i > 3)
                 {
                     Console.WriteLine("Too chaotic");
-                    bribes = -1;
-                    break;
+                    return; 
                 }
 
                 for (int j = i; j < q.Length; j++)
@@ -272,10 +276,51 @@ namespace HackerRank
 
             }
 
-            if (bribes != -1)
+            Console.WriteLine(bribes);
+
+        }
+
+
+        // Complete the minimumBribes function below.
+        static void minimumBribesPerf(int[] q)
+        {
+
+            /*
+             * This algortihm counts for each person before them, how many people have a bigger number.
+             */
+            const int NB_BRIBE_MAX = 2;
+            int bribes = 0; // no. bribes
+            int limit = 0; // limit where to stop searching for bribe
+            int l = q.Length-1;
+
+            for (int i = 0; i < q.Length; i++)
             {
-                Console.WriteLine(bribes);
+                if (q[i] - i > NB_BRIBE_MAX+1)
+                {
+                    Console.WriteLine("Too chaotic");
+                    return;
+                }
             }
+
+            // Check for everybody in the queue. Number 1 can be at last position.
+            for (int i = l; i > 0; i--)
+            {
+
+                // No need to search beyond "limit" because person can bribe NB_BRIBE_MAX people maximum
+                limit = q[i] == 1 ? 0 : q[i] - NB_BRIBE_MAX;
+                // limit = 0 if person has sticker 1.
+
+                for (int j = i - 1; j >= limit; j--)
+                {
+                    if (q[i] < q[j])
+                    {
+                        bribes++;
+                    }
+                }
+            }
+
+            Console.WriteLine(bribes);
+
         }
 
     }
