@@ -10,6 +10,7 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
+            /*
             // Calculate 1's complement
             int nb = 50;
             Console.WriteLine("Complement number of " + nb + " is " + Program.numberComplement(nb));
@@ -54,8 +55,9 @@ namespace HackerRank
             Program.minimumBribesPerf(new int[5] { 2, 3, 4, 5, 1 });
             Program.minimumBribesPerf(new int[5] { 2, 5, 1, 3, 4 });
             Program.minimumBribesPerf(new int[10] { 3, 1, 2, 5, 4, 7, 6, 8, 10, 9 });
-            Program.minimumBribesPerf(new int[8] { 1, 2, 5, 3, 7, 8, 6, 4 });
+            Program.minimumBribesPerf(new int[8] { 1, 2, 5, 3, 7, 8, 6, 4 });*/
 
+            Program.minimumSwaps(new int[7] {7, 1, 3, 2, 4, 5, 6 });
 
         }
 
@@ -321,6 +323,51 @@ namespace HackerRank
 
             Console.WriteLine(bribes);
 
+        }
+
+        // Complete the minimumSwaps function below.
+        static int minimumSwaps(int[] arr)
+        {
+            int swap = 0;
+            int l = arr.Length;
+            int curr = 0;
+            int index;
+            int nb_ok = 0;
+
+            for (int i = 0; i < l && (nb_ok + swap < l); i++)
+            {
+                curr = arr[i];
+
+                if (curr != i + 1) // number at the right place
+                {
+                    index = Array.IndexOf(arr, i + 1);
+                    arr[i] = arr[index];
+                    arr[index] = curr;
+                    swap++;
+                }
+                else
+                {
+                    nb_ok++;
+                }
+                Program.printArray(arr);
+            }
+
+            Console.WriteLine("\nswap=" + swap);
+
+            return swap;
+        }
+
+        static void printArray(int[] arr)
+        {
+
+            Console.Write("\n[");
+
+            for (int i = 0; i < arr.Length-1; i++)
+            {
+                Console.Write(arr[i] + ", ");
+
+            }
+            Console.Write( (arr[arr.Length-1]) + "]");
         }
 
     }
