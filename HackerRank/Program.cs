@@ -367,33 +367,32 @@ namespace HackerRank
             int swap = 0;
             int l = arr.Length;
             int curr = 0;
-            int index;
-            int nb_ok = 0;
+            int index = 0;
 
-            for (int i = 0; i < l && (nb_ok + swap < l); i++)
+            for (int i = 0; i < l - 1; i++)
             {
                 curr = arr[i];
 
                 if (curr != i + 1) // number NOT at the right place
                 {
-                    index = Array.IndexOf(arr, i + 1);
-                    arr[i] = arr[index];
+                    for (int j = i + 1; j < l; j++)
+                    {
+                        if (arr[j] == i + 1)
+                        {
+                            index = j;
+                            break;
+                        }
+                    }
+                    //index = Array.IndexOf(arr, i + 1);
+
+                    arr[i] = i + 1;
                     arr[index] = curr;
                     swap++;
                 }
-                else
-                {
-                    nb_ok++;
-                }
-                Program.printArray(arr);
             }
-
-            Console.WriteLine("\nswap=" + swap);
 
             return swap;
         }
-
-
 
         static void printArray(int[] arr)
         {
@@ -405,7 +404,9 @@ namespace HackerRank
                 Console.Write(arr[i] + ", ");
 
             }
+
             Console.Write( (arr[arr.Length-1]) + "]");
+
         }
 
     }
