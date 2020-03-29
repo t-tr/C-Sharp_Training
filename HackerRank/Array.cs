@@ -207,7 +207,7 @@ namespace HackerRank
                             break;
                         }
                     }
-                    //index = Array.IndexOf(arr, i + 1);
+                    index = Array.IndexOf(arr, i + 1);
 
                     arr[index] = arr[i];
 //                    arr[i] = i + 1;

@@ -13,13 +13,14 @@ namespace HackerRank
         {
 
             runBasic();
-            runAE2();
-            runTestArry();
+            //runAE2();
+            //runTestArry();
 
         }
 
         private static void runBasic()
         {
+            /*
             // Find odd numbers within a range
             BasicChallenges.oddNumbers(3, 7);
             BasicChallenges.oddNumbers(3, 8);
@@ -34,6 +35,11 @@ namespace HackerRank
             Console.WriteLine("1 in the list?:" + BasicChallenges.findNumber(lst, 1));
             Console.WriteLine("100 in the list?:" + BasicChallenges.findNumber(lst, 100));
             Console.WriteLine("-1 in the list?:" + BasicChallenges.findNumber(lst, -1));
+            */
+
+            Console.WriteLine("SockMerchant:" + BasicChallenges.sockMerchant(9, new int[] {10, 20, 20, 10, 10, 30, 50, 10, 20 }));
+
+
         }
 
         private static void runAE2()

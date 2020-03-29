@@ -83,5 +83,38 @@ namespace HackerRank
 
             return oddLst;
         }
+
+        // Complete the sockMerchant function below.
+        public static int sockMerchant(int n, int[] ar)
+        {
+
+            List<int> listColors = new List<int>();
+            int nbPairs = 0;
+            int nbSocks = 0;
+
+            // Count the number of colors
+            for (int i = 0; i < n; i++)
+            {
+                if (!listColors.Contains(ar[i]))
+                {
+                    listColors.Add(ar[i]);
+                }
+            }
+
+            foreach (int var in listColors)
+            {
+                nbSocks = 0;
+                for (int i = 0; i < n; i++)
+                {
+                    if (ar[i]==var)
+                    {
+                        nbSocks++;
+                    }
+                }
+                nbPairs += nbSocks / 2;
+            }
+
+            return nbPairs;
+        }
     }
 }
