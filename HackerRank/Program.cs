@@ -11,16 +11,6 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            /*
-            // Calculate 1's complement
-            int nb = 50;
-            Console.WriteLine("Complement number of " + nb + " is " + Program.numberComplement(nb));
-
-            // Execute palindrom method
-            Console.WriteLine("<abcdefgfedcba>:" + Program.palindrom("abcdefgfedcba"));
-            Console.WriteLine("<AbcdefGFedcba>:" + Program.palindrom("AbcdefGFedcba"));
-            Console.WriteLine("<bcdefgfedcba>:" + Program.palindrom("bcdefgfedcba"));
-            Console.WriteLine("<     >:" + Program.palindrom("     "));
 
             // Find odd numbers within a range
             Program.oddNumbers(3, 7);
@@ -35,10 +25,24 @@ namespace HackerRank
             Console.WriteLine("11 in the list?:" + Program.findNumber(lst, 11));
             Console.WriteLine("1 in the list?:" + Program.findNumber(lst, 1));
             Console.WriteLine("100 in the list?:" + Program.findNumber(lst, 100));
-            Console.WriteLine("-1 in the list?:" + Program.findNumber(lst, -1));*/
+            Console.WriteLine("-1 in the list?:" + Program.findNumber(lst, -1));
 
+            runAE2();
             runTestArry();
 
+        }
+
+        private static void runAE2()
+        {
+            // Calculate 1's complement
+            int nb = 50;
+            Console.WriteLine("Complement number of " + nb + " is " + AE2.numberComplement(nb));
+
+            // Execute palindrom method
+            Console.WriteLine("<abcdefgfedcba>:" + AE2.palindrom("abcdefgfedcba"));
+            Console.WriteLine("<AbcdefGFedcba>:" + AE2.palindrom("AbcdefGFedcba"));
+            Console.WriteLine("<bcdefgfedcba>:" + AE2.palindrom("bcdefgfedcba"));
+            Console.WriteLine("<     >:" + AE2.palindrom("     "));
         }
 
         private static void runTestArry()
@@ -71,49 +75,6 @@ namespace HackerRank
             ExerciseArray.minimumSwapsPerf(new int[4] { 4, 3, 1, 2 });
         }
 
-        /* Return 1's complement of the number given as parameter*/
-        public static int numberComplement(int number) {
-
-            string binary = Convert.ToString(number, 2);
-            char[] complBin = new char[binary.Length];
-
-            for (int j = 0; j < binary.Length; j++)
-            {
-                if (binary[j] == '0') {
-                    complBin[j] = '1';
-                } else {
-                    complBin[j] = '0';
-                }
-            }
-
-            //Console.WriteLine(res);
-
-            return Convert.ToInt32(new string(complBin), 2);
-        }
-
-        /* Return true if parameter is a palindrom, otherwise return false */
-        public static bool palindrom(string word)
-        {
-
-            if (word.Trim() == "") {
-                return true;
-            }
-
-            word = word.ToLower();
-            char[] reverse = new char[word.Length];
-
-            int j = 0;
-            for (int i = word.Length - 1; i >= 0; i--)
-            {
-                reverse[j] = word[i];
-                j++;
-            }
-
-            string result = new string(reverse);
-            //Console.WriteLine(result);
-
-            return (result == word);
-        }
 
         /* Find the number k in the array.
          Return YES if found, otherwise return "NO" */
