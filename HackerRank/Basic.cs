@@ -158,5 +158,12 @@ namespace HackerRank
             return valleys;
 
         }
+
+        public static int jumpingOnClouds(int[] c)
+        {
+            int jumps = 0;
+            return jumps;
+
+        }
     }
 }
