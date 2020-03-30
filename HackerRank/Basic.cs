@@ -162,8 +162,30 @@ namespace HackerRank
         public static int jumpingOnClouds(int[] c)
         {
             int jumps = 0;
-            return jumps;
+            int current = 0;
+            int l = c.Length;
 
+            for (int i = 0; i < l - 1; i++)
+            {
+
+                if (i + 2 < l)
+                {
+                    if (c[i + 2] == 0)
+                    {
+                        i++; // jump over 1 cloud
+                    }
+                    jumps++; // jump onto the next cloud
+                }
+                else
+                {
+                    if (i == l - 2 && c[i + 1] == 0)  // last cloud
+                    {
+                        jumps++;
+                    }
+                }
+            }
+
+            return jumps;
         }
     }
 }
