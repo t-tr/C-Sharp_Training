@@ -188,6 +188,7 @@ namespace HackerRank
         }
 
         // Complete the minimumSwaps function below.
+        // Performance test didn't pass in c# but passed in Java 8
         public static int minimumSwapsPerf(int[] arr)
         {
             int swap = 0;
@@ -237,6 +238,7 @@ namespace HackerRank
             Console.Write( (arr[arr.Length-1]) + "]");
 
         }
+
 
     }
 }

@@ -40,8 +40,8 @@ namespace HackerRank
             /*Console.WriteLine("SockMerchant:" + BasicChallenges.sockMerchant(9, new int[] {10, 20, 20, 10, 10, 30, 50, 10, 20 }));
             Console.WriteLine("countingValleys:" + BasicChallenges.countingValleys(12, "DDUUDDUDUUUD"));
             Console.WriteLine("jumpingOnClouds:" + BasicChallenges.jumpingOnClouds(new int[] {0,0,0,1,0,0 }));*/
-            Console.WriteLine("repeatedString:" + BasicChallenges.repeatedString("aba", 10));
-            Console.WriteLine("repeatedString:" + BasicChallenges.repeatedString("a", 10000000));
+            /*Console.WriteLine("repeatedString:" + BasicChallenges.repeatedString("aba", 10));
+            Console.WriteLine("repeatedString:" + BasicChallenges.repeatedString("a", 10000000));*/
 
         }
 

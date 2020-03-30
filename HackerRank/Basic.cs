@@ -218,5 +218,7 @@ namespace HackerRank
             return xfactor * total + nb_rest;
 
         }
+
+
     }
 }
