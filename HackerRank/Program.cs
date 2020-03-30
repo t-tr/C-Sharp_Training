@@ -41,6 +41,7 @@ namespace HackerRank
             Console.WriteLine("countingValleys:" + BasicChallenges.countingValleys(12, "DDUUDDUDUUUD"));
             Console.WriteLine("jumpingOnClouds:" + BasicChallenges.jumpingOnClouds(new int[] {0,0,0,1,0,0 }));*/
             Console.WriteLine("repeatedString:" + BasicChallenges.repeatedString("aba", 10));
+            Console.WriteLine("repeatedString:" + BasicChallenges.repeatedString("a", 10000000));
 
         }
 
