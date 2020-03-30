@@ -12,9 +12,9 @@ namespace HackerRank
         static void Main(string[] args)
         {
 
-            runBasic();
+            //runBasic();
             //runAE2();
-            //runTestArry();
+            runTestArry();
 
         }
 
@@ -61,7 +61,7 @@ namespace HackerRank
         private static void runTestArry()
         {
             // Run hourglassSum
-            Console.WriteLine(ExerciseArray.hourglassSum());
+            /*Console.WriteLine(ExerciseArray.hourglassSum());
 
             // Run rotLeft
             ExerciseArray.rotLeft(new int[15] { 33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97 }, 13);
@@ -85,7 +85,20 @@ namespace HackerRank
             ExerciseArray.minimumSwapsPerf(new int[7] { 7, 1, 3, 2, 4, 5, 6 });
 
             ExerciseArray.minimumSwapsPerf(new int[7] { 7, 1, 3, 2, 4, 5, 6 });
-            ExerciseArray.minimumSwapsPerf(new int[4] { 4, 3, 1, 2 });
+            ExerciseArray.minimumSwapsPerf(new int[4] { 4, 3, 1, 2 });*/
+
+
+            int[][] queries = new int[3][] {
+                new int[] {1, 2, 100 },
+                new int[] {2, 5, 100 },
+                new int[] {3, 4, 100 }
+            };
+
+            Console.WriteLine(queries[0][0]);
+            Console.WriteLine(queries[2][2]);
+            Console.WriteLine(queries[2][0]);
+            Console.WriteLine("" + ExerciseArray.arrayManipulation(5, queries));
+
         }
     }
 }

@@ -240,5 +240,24 @@ namespace HackerRank
         }
 
 
+        // Complete the arrayManipulation function below.
+        public static long arrayManipulation(int n, int[][] queries)
+        {
+
+            long max = 0;
+            long[] ar = new long[n];
+
+            for (long i = 0; i<n; i++)
+            {
+                ar[i]= 0;
+            }
+
+            //for (int i = qu)
+
+
+                return max;
+
+    }
+
     }
 }
