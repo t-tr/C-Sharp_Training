@@ -187,5 +187,36 @@ namespace HackerRank
 
             return jumps;
         }
+
+        public static long repeatedString(string s, long n)
+        {
+
+            long rest = 0;
+            long xfactor = 0;
+            int total = 0;
+            int nb_rest = 0;
+            int l = s.Length;
+
+            xfactor = n / l;
+            rest = n % l;
+
+            for (int i = 0; i < l; i++)
+            {
+
+                if (s[i] == 'a')
+                {
+                    total++;
+                }
+
+                if (i == rest - 1)
+                {
+                    nb_rest = total;
+                }
+
+            }
+
+            return xfactor * total + nb_rest;
+
+        }
     }
 }
