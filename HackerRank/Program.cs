@@ -94,9 +94,6 @@ namespace HackerRank
                 new int[] {3, 4, 100 }
             };
 
-            Console.WriteLine(queries[0][0]);
-            Console.WriteLine(queries[2][2]);
-            Console.WriteLine(queries[2][0]);
             Console.WriteLine("" + ExerciseArray.arrayManipulation(5, queries));
 
         }
