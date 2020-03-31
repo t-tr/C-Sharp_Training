@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HackerRank
 {
-    class BasicChallenges
+    class Easy
     {
 
         /* Find the number k in the array.

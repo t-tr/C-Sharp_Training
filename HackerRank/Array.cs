@@ -244,20 +244,55 @@ namespace HackerRank
         public static long arrayManipulation(int n, int[][] queries)
         {
 
-            long max = 0;
+            int nb_queries = queries.Length;
             long[] ar = new long[n];
 
-            for (long i = 0; i<n; i++)
+
+            for (long i = 0; i < n; i++)
             {
-                ar[i]= 0;
+                ar[i] = 0;
             }
 
-            //for (int i = qu)
+            for (int i = 0; i < nb_queries; i++)
+            {
+                for (int j = queries[i][0]; j <= queries[i][1]; j++)
+                {
+                    ar[j - 1] += queries[i][2];
+                }
+            }
 
+            return ar.Max();
 
-                return max;
+        }
 
-    }
+        /*
+         * 
+            int nb_queries = queries.length;
+            long[] ar = new long[n];
+            int a,b,k;
 
+            for (int i = 0; i<nb_queries; i++)
+            {
+                a=queries[i][0];
+                b=queries[i][1];
+                k=queries[i][2];
+
+                for (int j = a; j <= b; j++)
+                {
+                    ar[j - 1] += k;
+                }
+            }
+
+            long max = 0;
+
+            for (int i = 0; i<n; i++)
+            {
+                if (ar[i]>max){
+                max=ar[i];
+                }
+            }
+
+            return max;
+         * */
     }
 }

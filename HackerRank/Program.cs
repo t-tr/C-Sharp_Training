@@ -14,34 +14,40 @@ namespace HackerRank
 
             //runBasic();
             //runAE2();
-            runTestArry();
+            //runTestArry();
+            runTestString();
 
+        }
+
+        private static void runTestString()
+        {
+            Console.WriteLine("makeAnagram:" + ExerciseString.makeAnagram("cde","abc"));
         }
 
         private static void runBasic()
         {
             /*
             // Find odd numbers within a range
-            BasicChallenges.oddNumbers(3, 7);
-            BasicChallenges.oddNumbers(3, 8);
-            BasicChallenges.oddNumbers(4, 8);
-            BasicChallenges.oddNumbers(4, 9);
-            BasicChallenges.oddNumbers(4, 155);
+            Easy.oddNumbers(3, 7);
+            Easy.oddNumbers(3, 8);
+            Easy.oddNumbers(4, 8);
+            Easy.oddNumbers(4, 9);
+            Easy.oddNumbers(4, 155);
 
             // Call find the number
             List<int> lst = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 100 };
-            Console.WriteLine("6 in the list?:" + BasicChallenges.findNumber(lst, 6));
-            Console.WriteLine("11 in the list?:" + BasicChallenges.findNumber(lst, 11));
-            Console.WriteLine("1 in the list?:" + BasicChallenges.findNumber(lst, 1));
-            Console.WriteLine("100 in the list?:" + BasicChallenges.findNumber(lst, 100));
-            Console.WriteLine("-1 in the list?:" + BasicChallenges.findNumber(lst, -1));
+            Console.WriteLine("6 in the list?:" + Easy.findNumber(lst, 6));
+            Console.WriteLine("11 in the list?:" + Easy.findNumber(lst, 11));
+            Console.WriteLine("1 in the list?:" + Easy.findNumber(lst, 1));
+            Console.WriteLine("100 in the list?:" + Easy.findNumber(lst, 100));
+            Console.WriteLine("-1 in the list?:" + Easy.findNumber(lst, -1));
             */
 
-            /*Console.WriteLine("SockMerchant:" + BasicChallenges.sockMerchant(9, new int[] {10, 20, 20, 10, 10, 30, 50, 10, 20 }));
-            Console.WriteLine("countingValleys:" + BasicChallenges.countingValleys(12, "DDUUDDUDUUUD"));
-            Console.WriteLine("jumpingOnClouds:" + BasicChallenges.jumpingOnClouds(new int[] {0,0,0,1,0,0 }));*/
-            /*Console.WriteLine("repeatedString:" + BasicChallenges.repeatedString("aba", 10));
-            Console.WriteLine("repeatedString:" + BasicChallenges.repeatedString("a", 10000000));*/
+            /*Console.WriteLine("SockMerchant:" + Easy.sockMerchant(9, new int[] {10, 20, 20, 10, 10, 30, 50, 10, 20 }));
+            Console.WriteLine("countingValleys:" + Easy.countingValleys(12, "DDUUDDUDUUUD"));
+            Console.WriteLine("jumpingOnClouds:" + Easy.jumpingOnClouds(new int[] {0,0,0,1,0,0 }));*/
+            /*Console.WriteLine("repeatedString:" + Easy.repeatedString("aba", 10));
+            Console.WriteLine("repeatedString:" + Easy.repeatedString("a", 10000000));*/
 
         }
 
