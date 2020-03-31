@@ -22,6 +22,9 @@ namespace HackerRank
         private static void runTestString()
         {
             Console.WriteLine("makeAnagram:" + ExerciseString.makeAnagram("cde","abc"));
+            Console.WriteLine("makeAnagram:" + ExerciseString.makeAnagram("showman", "woman"));
+            Console.WriteLine("makeAnagram:" + ExerciseString.makeAnagram("fcrxzwscanmligyxyvym", "jxwtrhvujlmrpdoqbisbwhmgpmeoke"));
+            Console.WriteLine("makeAnagram:" + ExerciseString.makeAnagram("jxwtrhvujlmrpdoqbisbwhmgpmeoke", "fcrxzwscanmligyxyvym"));
         }
 
         private static void runBasic()
