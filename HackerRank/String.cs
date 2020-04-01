@@ -7,44 +7,69 @@ namespace HackerRank
     class ExerciseString
     {
 
+        public static int alternatingCharacters(string s)
+        {
+
+            int del = 0;
+            int l = s.Length;
+
+            for (int i = 0; i < l - 1; i++)
+            {
+
+                if (s[i] == s[i + 1])
+                {
+                    del++;
+                }
+            }
+
+            return del;
+
+        }
+
         public static int makeAnagram(string a, string b)
         {
             int res = 0;
-            string longer;
-            string smaller;
             string anagram="";
-            int anagraml = 0;
 
-            if (a.Length >= b.Length) {
+            /*if (a.Length >= b.Length) {
                 longer = a;
                 smaller = b;
             }
             else {
                 longer = b;
                 smaller = a;
-            }
+            }*/
 
-            for (int i=0; i < smaller.Length; i++)
+            for (int i=0; i < a.Length; i++)
             {
-                if (smaller.IndexOf(longer[i]) == -1) // check if char of longer string is in smaller string
+                if (b.IndexOf(a[i]) == -1)
                 {
                     res++;
                 }
-
-                if (longer.IndexOf(smaller[i]) == -1) // check if char of smaller string is in longer string
+                else
                 {
-                    res++;
+                    if (anagram.IndexOf(a[i]) == -1) {
+                        anagram+= a[i];
+                    }
                 }
             }
 
-            // if string longer than the other
-            for (int j = smaller.Length; j < longer.Length; j++)
+            for (int i = 0; i < b.Length; i++)
             {
-                if (smaller.IndexOf(longer[j]) == -1)
+                if (a.IndexOf(b[i]) == -1)
                 {
                     res++;
                 }
+                else
+                {
+                    if (anagram.IndexOf(b[i]) == -1)
+                    {
+                        anagram += b[i];
+                    }
+                }
             }
+
+            Console.WriteLine(anagram);
 
             return res;
 
