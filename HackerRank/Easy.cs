@@ -242,6 +242,29 @@ namespace HackerRank
 
         }
 
+        public static void plusMinus(int[] arr)
+        {
 
+            Double plus = 0;
+            Double minus = 0;
+            Double l = arr.Length;
+
+            for (int i = 0; i < l; i++)
+            {
+                if (arr[i] > 0)
+                {
+                    plus++;
+                }
+                if (arr[i] < 0)
+                {
+                    minus++;
+                }
+            }
+
+            Console.WriteLine("{0:N6}", plus / l);
+            Console.WriteLine("{0:N6}", minus / l);
+            Console.WriteLine("{0:N6}", ((l - minus - plus) / l));
+
+        }
     }
 }
