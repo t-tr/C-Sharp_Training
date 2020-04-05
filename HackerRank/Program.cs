@@ -68,9 +68,17 @@ namespace HackerRank
             lst.Add(lst3);
             Console.WriteLine("diagonalDifference:" + Easy.diagonalDifference(lst)); // Excpeted result is 15*/
 
-            Easy.plusMinus(new int[] { -4, 3, - 9, 0, 4, 1 });
+            /*Easy.plusMinus(new int[] { -4, 3, - 9, 0, 4, 1 });
             //Expected Output: 0.375000, 0.375000, 0.250000
-            Easy.plusMinus(new int[] { 1, 2, 3, - 1, - 2, - 3, 0, 0 });
+            Easy.plusMinus(new int[] { 1, 2, 3, - 1, - 2, - 3, 0, 0 });*/
+
+            /*
+             *     #
+             *    ##
+             *   ###
+             *  ####
+             * #####*/
+            //Easy.staircase(5);
 
         }
 

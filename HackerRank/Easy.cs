@@ -270,5 +270,24 @@ namespace HackerRank
             Console.WriteLine("{0:N6}", ((l - minus - plus) / l));
 
         }
+
+        public static void staircase(int n)
+        {
+
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 0; j < n - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = n - i; j < n; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.Write("\n");
+            }
+
+
+        }
     }
 }
