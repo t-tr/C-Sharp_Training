@@ -12,11 +12,10 @@ namespace HackerRank
         static void Main(string[] args)
         {
 
-            //runBasic();
+            runEasyChallenges();
             //runAE2();
-            //runTestArry();
-            runTestString();
-
+            //runTestArray();
+            //runTestString();
         }
 
         private static void runTestString()
@@ -34,7 +33,7 @@ namespace HackerRank
             Console.WriteLine("makeAnagram:" + ExerciseString.makeAnagram("jxwtrhvujlmrpdoqbisbwhmgpmeoke", "fcrxzwscanmligyxyvym"));
         }
 
-        private static void runBasic()
+        private static void runEasyChallenges()
         {
             /*
             // Find odd numbers within a range
@@ -59,6 +58,8 @@ namespace HackerRank
             /*Console.WriteLine("repeatedString:" + Easy.repeatedString("aba", 10));
             Console.WriteLine("repeatedString:" + Easy.repeatedString("a", 10000000));*/
 
+
+
         }
 
         private static void runAE2()
@@ -74,7 +75,7 @@ namespace HackerRank
             Console.WriteLine("<     >:" + AE2.palindrom("     "));
         }
 
-        private static void runTestArry()
+        private static void runTestArray()
         {
             // Run hourglassSum
             /*Console.WriteLine(ExerciseArray.hourglassSum());
