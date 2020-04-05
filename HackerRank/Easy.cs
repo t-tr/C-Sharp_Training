@@ -219,6 +219,27 @@ namespace HackerRank
 
         }
 
+        /*
+         * Complete the 'diagonalDifference' function below.
+         *
+         * The function is expected to return an INTEGER.
+         * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+         */
+        public static int diagonalDifference(List<List<int>> arr)
+        {
+            int diag1 = 0;
+            int diag2 = 0;
 
+            int l = arr[0].Count;
+
+            for (int i = 0; i < l; i++)
+            {
+                diag1 += arr[i][i];
+                diag2 += arr[i][l - i - 1];
+            }
+
+            return Math.Abs(diag1 - diag2);
+
+        }
     }
 }

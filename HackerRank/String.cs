@@ -29,45 +29,38 @@ namespace HackerRank
         public static int makeAnagram(string a, string b)
         {
             int res = 0;
+            int db = 0;
+            string lg;
+            string sm;
             string anagram="";
 
-            /*if (a.Length >= b.Length) {
-                longer = a;
-                smaller = b;
+            int x1 = 0;
+            int x2 = 0;
+            int x3 = 0;
+            int x4 = 0;
+
+            if (a.Length >= b.Length) {
+                lg = a;
+                sm = b;
             }
             else {
-                longer = b;
-                smaller = a;
-            }*/
-
-            for (int i=0; i < a.Length; i++)
-            {
-                if (b.IndexOf(a[i]) == -1)
-                {
-                    res++;
-                }
-                else
-                {
-                    if (anagram.IndexOf(a[i]) == -1) {
-                        anagram+= a[i];
-                    }
-                }
+                lg = b;
+                sm = a;
             }
 
-            for (int i = 0; i < b.Length; i++)
+            for (int i=0; i < lg.Length; i++)
             {
-                if (a.IndexOf(b[i]) == -1)
+                if (sm.IndexOf(lg[i]) != -1)  // found
                 {
-                    res++;
-                }
-                else
-                {
-                    if (anagram.IndexOf(b[i]) == -1)
+                    if (anagram.IndexOf(lg[i]) == -1)
                     {
-                        anagram += b[i];
+                        anagram += lg[i];
                     }
                 }
             }
+
+
+            res = sm.Length + lg.Length;
 
             Console.WriteLine(anagram);
 
