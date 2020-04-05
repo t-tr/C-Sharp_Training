@@ -26,6 +26,7 @@ namespace HackerRank
             Console.WriteLine("alternatingCharacters:" + ExerciseString.alternatingCharacters("BABABA"));
             Console.WriteLine("alternatingCharacters:" + ExerciseString.alternatingCharacters("AAABBB"));*/
 
+            //TODO finish makeAnagram
             Console.WriteLine("makeAnagram:" + ExerciseString.makeAnagram("cde","abc"));
             Console.WriteLine("makeAnagram:" + ExerciseString.makeAnagram("showman", "woman"));
             Console.WriteLine("makeAnagram:" + ExerciseString.makeAnagram("abeec", "ebz"));
@@ -105,6 +106,7 @@ namespace HackerRank
             ExerciseArray.minimumSwapsPerf(new int[4] { 4, 3, 1, 2 });*/
 
 
+            // TODO finish arrayManipulation
             int[][] queries = new int[3][] {
                 new int[] {1, 2, 100 },
                 new int[] {2, 5, 100 },
