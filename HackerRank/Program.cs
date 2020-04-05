@@ -59,7 +59,14 @@ namespace HackerRank
             /*Console.WriteLine("repeatedString:" + Easy.repeatedString("aba", 10));
             Console.WriteLine("repeatedString:" + Easy.repeatedString("a", 10000000));*/
 
-
+            List<int> lst1 = new List<int> { 11, 2, 4 };
+            List<int> lst2 = new List<int> { 4, 5, 6 };
+            List<int> lst3 = new List<int> { 10, 8, -12 } ;
+            List<List<int>> lst = new List<List<int>>();
+            lst.Add(lst1);
+            lst.Add(lst2);
+            lst.Add(lst3);
+            Console.WriteLine("diagonalDifference:" + Easy.diagonalDifference(lst)); // Excpeted result is 15
 
         }
 

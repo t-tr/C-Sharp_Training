@@ -241,5 +241,7 @@ namespace HackerRank
             return Math.Abs(diag1 - diag2);
 
         }
+
+
     }
 }
