@@ -86,6 +86,9 @@ namespace HackerRank
 
             Console.WriteLine("07:05:45PM->" + Easy.timeConversion("07:05:45PM"));
             Console.WriteLine("11:30:45AM->" + Easy.timeConversion("11:30:45AM"));
+            Console.WriteLine("12:30:45AM->" + Easy.timeConversion("00:30:45AM")); // 00:30:45
+            Console.WriteLine("12:00:00PM->" + Easy.timeConversion("12:00:00PM")); // 12:00:00 
+
         }
 
         private static void runAE2()
