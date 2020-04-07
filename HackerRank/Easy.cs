@@ -335,5 +335,44 @@ namespace HackerRank
 
             return candles;
         }
+
+
+        public static string timeConversion(string s)
+        {
+            string military;
+            string mmss = s.Substring(2, 6);
+
+            // Get the hour
+            int hh = Convert.ToInt32(s.Substring(0, 2));
+
+
+            if (s[8] == 'A')
+            {
+                if (hh == 12)
+                {
+                    // Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock
+                    military = "00" + mmss;
+                }
+                else
+                {
+                    // Just remove AM
+                    military = s.Substring(0, 8);
+                }
+            }
+            else
+            {
+                if (hh != 12)
+                {
+                    military = hh + 12 + mmss;
+                }
+                else
+                {
+                    // Do not add 12 to hh if 12 already
+                    military = s.Substring(0, 8);
+                }
+            }
+
+            return military;
+        }
     }
 }
