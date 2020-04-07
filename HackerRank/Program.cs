@@ -80,6 +80,7 @@ namespace HackerRank
              * #####*/
             //Easy.staircase(5);
 
+            Easy.miniMaxSum(new int[] {1,2,3,4,5 }); // Expected result is 10 14
         }
 
         private static void runAE2()
