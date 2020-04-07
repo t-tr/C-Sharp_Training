@@ -80,7 +80,9 @@ namespace HackerRank
              * #####*/
             //Easy.staircase(5);
 
-            Easy.miniMaxSum(new int[] {1,2,3,4,5 }); // Expected result is 10 14
+            //Easy.miniMaxSum(new int[] {1,2,3,4,5 }); // Expected result is 10 14
+
+            Console.WriteLine(Easy.birthdayCakeCandles(new int[] { 3, 2, 1, 3 } )); //  Expected result is 2 (2 candles with height 3)
         }
 
         private static void runAE2()

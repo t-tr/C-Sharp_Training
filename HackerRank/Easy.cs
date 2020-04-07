@@ -311,7 +311,29 @@ namespace HackerRank
 
             Console.Write(sum - max + " ");
             Console.Write(sum - min);
+        }
 
+        // Complete the birthdayCakeCandles function below.
+        public static int birthdayCakeCandles(int[] ar)
+        {
+            int candles = 0;
+            int tallest = ar[0];
+
+            for (int i = 0; i < ar.Length; i++)
+            {
+                if (tallest < ar[i])
+                {
+                    tallest = ar[i];
+                    candles = 0;
+                }
+
+                if (tallest == ar[i])
+                {
+                    candles++;
+                }
+            }
+
+            return candles;
         }
     }
 }
