@@ -289,5 +289,29 @@ namespace HackerRank
 
 
         }
+
+        public static void miniMaxSum(int[] arr)
+        {
+            int min = arr[0];
+            int max = arr[0];
+            long sum = arr[0];
+
+            for (int i = 1; i < 5; i++)
+            {
+                if (arr[i] < min)
+                {
+                    min = arr[i];
+                }
+                if (arr[i] > max)
+                {
+                    max = arr[i];
+                }
+                sum += arr[i];
+            }
+
+            Console.Write(sum - max + " ");
+            Console.Write(sum - min);
+
+        }
     }
 }
