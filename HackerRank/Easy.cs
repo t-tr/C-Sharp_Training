@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace HackerRank
@@ -373,6 +374,21 @@ namespace HackerRank
             }
 
             return military;
+        }
+
+        public static void bonAppetit(List<int> bill, int k, int b)
+        {
+            int s = bill.Sum();
+            int bon = (s - bill[k]) / 2;
+
+            if (bon == b)
+            {
+                Console.WriteLine("Bon Appetit");
+            }
+            else
+            {
+                Console.WriteLine(b - bon);
+            }
         }
     }
 }
